@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'json'
-require 'byebug'
 
 get '/' do
   File.read('./views/index.html')
