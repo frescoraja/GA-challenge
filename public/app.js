@@ -37,7 +37,6 @@ function movieApp () {
     var content = document.getElementById('content'),
         resultList = document.createElement('ul');
     content.innerHTML = '';
-    content.appendChild(resultList);
     if (typeof data === 'undefined') {
       content.innerText = 'No Results Found!';
       return;
@@ -47,19 +46,20 @@ function movieApp () {
           newLi = document.createElement('li'),
           newImg = document.createElement('img'),
           newA = document.createElement('a');
-      newA.appendChild(newImg);
-      newLi.appendChild(newA);
       getFavButton(newLi, movie);
       if (movie.Poster !== 'N/A') {
-        newImg.src = movie.Poster;
+        newImg.setAttribute('src', movie.Poster);
       }
       var link = document.createTextNode(movie.Title + ' (' + movie.Year + ')');
       newA.setAttribute('data-movieid', dataID);
       newA.href = "#";
+      newA.appendChild(newImg);
       newA.appendChild(link);
+      newLi.appendChild(newA);
       resultList.appendChild(newLi);
       newA.addEventListener('click', getMovieDetails);
     });
+    content.appendChild(resultList);
   }
 
   //To get the movie's detailed view, we make another AJAX request to the
@@ -93,7 +93,7 @@ function movieApp () {
     getFavButton(content, movie);
     if (movie.Poster !== 'N/A') {
       newImg = document.createElement('img');
-      newImg.src = movie.Poster;
+      newImg.setAttribute('src', movie.Poster);
       content.appendChild(newImg);
     }
     for (var property in movie) {
