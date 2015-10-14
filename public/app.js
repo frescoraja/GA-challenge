@@ -93,8 +93,8 @@ function movieApp () {
     getFavButton(content, movie);
     if (movie.Poster !== 'N/A') {
       newImg = document.createElement('img');
-      content.appendChild(newImg);
       newImg.setAttribute('src', movie.Poster);
+      content.appendChild(newImg);
     }
     for (var property in movie) {
       if (property === 'Poster') {
