@@ -23,12 +23,18 @@ ul {
   padding: 0px;
 }
 
-ul li {
+ul > li {
   text-align: center;
   list-style: none;
-  display: inline-flex;
+  display: inline-table;
   width: 220px;
   margin: 1%;
+}
+
+button {
+  margin: auto;
+  padding: 10px;
+  display: block;
 }
 
 img {
