@@ -1,0 +1,45 @@
+html {
+  color: white;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+header {
+  padding: 20px;
+  margin: 0px;
+}
+
+#content {
+  width: 90%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+ul {
+  text-align: center;
+  padding: 0px;
+}
+
+ul li {
+  text-align: center;
+  list-style: none;
+  display: inline-flex;
+  width: 220px;
+  margin: 1%;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  margin: auto;
+  background-image: url("movie-placeholder.jpg");
+  background-size: contain;
+  display: block;
+}
+
+th {
+  text-align: center;
+}
