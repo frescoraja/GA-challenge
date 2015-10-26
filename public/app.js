@@ -156,7 +156,7 @@ function movieApp () {
     }
   }
 
-  //Sends movie data to add to favorites list via an AJAX POST request
+  //Sends movie data to add to favorites list via an AJAX GET request
   //upon success, removes the add favorite button
   function addFavorite (event) {
     event.preventDefault();
@@ -175,7 +175,7 @@ function movieApp () {
         parentEl.appendChild(favEl);
       }
     };
-    xhttp.open('post', urlString);
+    xhttp.open('get', urlString);
     xhttp.send();
   }
 
